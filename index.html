@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>caitp.github.io</title>
+    <link rel="stylesheet"
+          type="text/css"
+          href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <style type="text/css">
+    body {
+      padding-top: 60px;
+    }
+
+    .project-list li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: block;
+    }
+
+    .project-list li a {
+      position: relative;
+      display: block;
+      line-height: 20px;
+      padding: 6px 20px;
+      overflow: hidden;
+      margin: .25em;
+      color: #666;
+      background-color: transparent;
+      text-decoration: none;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      border-radius: 8px;
+    }
+
+    .project-list li a:hover {
+      color: #fff;
+      background-color: #FBAED2;
+      text-decoration: none;
+    }
+    .project-list li a:hover b {
+      color:; #fff;
+    }
+    .project-list li a:hover small {
+      color: #FDD2E6;
+    }
+
+    .project-list li.fork a:before {
+      colore: #999;
+      content: '\2646';
+      position: absolute;
+      left: 5px;
+    }
+
+    .description {
+      color: #ccc;
+      display: inline-block;
+      line-height: 1.3em;
+      margin-left: .5em;
+    }
+
+    .info {
+      float: right;
+      clear: right;
+    }
+
+    .stars, .forks {
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .stars:before, .forks:before {
+      display: inline-block;
+      font-size: 14px;
+      width: 20px;
+      text-align: center;
+      margin-left: .5em;
+    }
+
+    .stars:before { content: '\2605'; }
+    .forks:before { content: '\2646'; }
+
+    code.long { white-space: pre-wrap!important; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a href="https://github.com/caitp"
+             title="caitp@github"
+             class="navbar-brand">@caitp</a>
+          <button class="navbar-toggle btn"
+                  data-toggle="collapse"
+                  data-target="#nav-items">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="nav-items" class="container navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="https://npmjs.org/~caitp" title="NPM">NPM</a></li>
+            <li><a href="http://plnkr.co/users/caitp" title="caitp@plnkr.co">Plunker</a></li>
+            <li><a href="http://caitp.github.io/angular-drop" title="AngularDrop">AngularDrop</a></li>
+            <li><a href="http://caitp.github.io/ui-comments" title="UI-Comments">UI-Comments</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span id="project-count"></span>
+            <span id="project-info"></span>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <ul id="navTabs" class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#" data-target="#moi" title="All About Moi">Moi</a></li>
+            <li><a data-toggle="tab" href="#" data-target="#top-10" title="Top 10 Projects">Top 10</a></li>
+            <li><a data-toggle="tab" href="#" data-target="#recent" title="Most Recent Projects">Most Recent</a></li>
+          </ul>
+          <div id="navTabsContent" class="tab-content">
+            <section class="tab-pane fade active in container" id="moi">
+              <div class="row">
+                <img class="col-4 col-md-4 col-lg-4 col-sm-4 col-xs-4 img-responsive" src="https://github.com/caitp.png" alt="@caitp's shiny face"></img>
+                <div class="col-8 col-md-8 col-lg-8 col-sm-8 col-xs-8">
+                  <p>I'm employed on the Compilers team at <a href="https://www.igalia.com">Igalia</a>. Igalia
+                    is a consultancy well known in a number of open source software communities, including Gnome, WebKit,
+                    Chromium (and v8), Rust, Servo, LLVM, the Linux kernel, and many others.
+                  <p>My work is primarily focused on implementing <a href="https://tc39.github.io/ecma262/">ECMAScript</a>
+                    language features in the <a href="https://v8project.blogspot.ca">v8</a> and
+                    <a href="https://trac.webkit.org/wiki/JavaScriptCore">JavaScriptCore</a> JavaScript engines.
+                  <p>I first became interested in work on compilers during my teens, reading textbooks relating to
+                    deterministic finite state machines as they pertain to parsers and regular expressions, and about the
+                    building blocks of a compiler. I would read GCC source code, and try to figure out how it all worked,
+                    putting together some toy compilers. Eventually, I applied this knowledge to creating some simple
+                    domain-specific scripting tools to assist with work at an earlier employer.
+                   <p>After studying at Seneca College,
+                    and particularly working through David Humphrey's Open Source Software courses, I became fascinated by the
+                    culture around OSS, and web browsers in particular. Ultimately, this also produced my interest in JavaScript,
+                    and I would cultivate this interest by becoming a core contributor to
+                    <a href="https://github.com/angular/angular.js/">AngularJS</a>, which caught my eye in part because of its expression
+                    parsing system. Ultimately, this led to my involvement in work on v8, where I finally gained the opportunity to hone
+                    my knowledge and understanding of compilers. This also introduced me to <a href="https://wingolog.org">Andy Wingo</a>,
+                    who does awesome work on a few other dynamic language compilers, and to Igalia as a whole.
+
+                  <p>Some notable things I've worked on (not an exhaustive list, and links to upstream patches are only small
+                     portions of the work that I've put into those features!):
+                    <ul>
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">Async Functions</a>
+                          (<a href="https://chromium.googlesource.com/v8/v8/+/d08c0304c5779223d6c468373af4815ec3ccdb84">v8</a>,
+                           <a href="https://trac.webkit.org/changeset/208052/webkit">JavaScriptCore</a>)</li>
+                      <li><a href="http://2ality.com/2016/10/asynchronous-iteration.html">Async Iteration</a>, including `for-await-of` loops and
+                           asynchronous generator functions
+                          (<a href="https://chromium.googlesource.com/v8/v8.git/+/bf463c4dc080abb1ae39c6f0a93e6a95867b0ca3">v8)
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">Template Literals</a>
+                          (<a href="https://chromium.googlesource.com/v8/v8.git/+/353b6964678f7d4382be1db7b2eadce1acf5c830">v8</a>)
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest Parameters</a>
+                          (<a href="https://chromium.googlesource.com/v8/v8/+/8bb2e397745630375c3f189293cfbaf791a6403c">v8</a>)
+                      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a>
+                          (<a href="https://chromium.googlesource.com/v8/v8/+/b634a61d84b8793ee2939690685d4b9f7fb32b95">v8</a>)
+                    </ul>
+                </div>
+              </div>
+            </section>
+            <section class="tab-pane fade" id="top-10">
+              <ul class="list-group project-list" id="top-10-list"></ul>
+            </section>
+            <section class="tab-pane fade" id="recent">
+              <ul class="list-group project-list" id="recent-list"></ul>
+            </section>
+          </div>
+        </div>
+        <div class="panel-footer">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js"></script>
+    <script>
+      var $count = $('#project-count');
+      var $info = $('#project-info');
+      var totalStargazers = 0, totalForks = 0;
+      var totalPublic = 0, totalForked = 0;
+      var repos = [];
+      var today = new Date();
+
+      function listRepo(list, repo) {
+        var forked = repo.fork || false;
+        var stargazers = repo.stargazers_count;
+        var forks = repo.forks_count;
+        var klass = forked ? 'fork' : '';
+
+        list.append(
+          '<li class="list-group-item ' + klass + '">' +
+            '<a href="' + repo.html_url + '" title="' + repo.name + '">' +
+              '<span class="info">' +
+                '<b class="language">' + (repo.language || '') + '</b>' +
+                '<b class="stars">' + stargazers + '</b>' +
+                '<b class="forks">' + forks + '</b>' +
+              '</span>' +
+              '<b>' + repo.name + '<small class="description">' + repo.description + '</small></b>' +
+            '</a>' +
+          '</li>');
+      }
+
+      function build() {
+        if (!repos.length) return;
+
+        var $top10 = $('#top-10-list');
+        var $mostRecent = $("#recent-list");
+        totalPublic = 0;
+        totalStargazers = 0;
+        totalForks = 0;
+        totalForked = 0;
+        totalStargazers = 0;
+        forked = 0;
+
+        // Clear lists of repositories
+        $top10.empty();
+        $mostRecent.empty();
+
+        // List top 10 repositories
+        repos.sort(mostPopular).
+            forEach(function(repo, i) {
+          // Update statistic information
+          totalStargazers += repo.stargazers_count;
+          totalForks += repo.forks_count;
+          repo.fork ? ++totalForked : ++totalPublic;
+          if (i <= 10) {
+            // Only list the most popular repositories
+            var desc = repo.description || "";
+            if (typeof desc !== "string") repo.description = "";
+            else if (desc.length > 10) {
+              repo.description = desc.substring(0, 96) + ' ...';
+            }
+            listRepo($top10, repo);
+          }
+        });
+
+        // List most recent repositories
+        repos.sort(mostRecent).
+            slice(0, 5).
+            forEach(function(repo) {
+          if (repo.description.length > 100) {
+            repo.description = repo.description.substring(0, 96) + ' ...';
+          }
+          listRepo($mostRecent, repo);
+        });
+
+        // Update additional data
+        $count.html(repos.length + ' repositories; ' + totalPublic + ' public, ' + totalForked + ' forks');
+        $info.html('<b class="stars">' + totalStargazers + '</b><b class="forks">' + totalForks + '</b>');
+
+        function days(a, b) {
+          var ms = 1000 * 60 * 60 * 24;
+          var x = a.getUTCDate();
+          var y = b.getUTCDate();
+          var z = today.getUTCDate();
+          if (Math.floor((z - x) / ms) > 90) return -1;
+          if (Math.floor((z - y) / ms) > 90) return 1;
+          return 0;
+        }
+
+        function mostPopular(a, b) {
+          var m, x, y;
+          // Don't rank caitp.github.io high
+          if ((m = [a.name, b.name].indexOf('caitp.github.io')) > -1) return -m || 1;
+
+          var ad = new Date(a.pushed_at), bd = new Date(b.pushed_at);
+          if ((m = days(ad, bd)) !== 0) return m;
+
+          if (a.forks || b.forks) return a.forks > b.forks ? 1 : -1;
+          return bd - ad;
+        }
+
+        function mostRecent(a, b) {
+          var m;
+          // Don't rank caitp.github.io high
+          if ((m = [a.name, b.name].indexOf('caitp.github.io')) > -1) return -m || 1;
+          if (a.fork !== b.fork) return a.fork ? 1 : -1;
+          return new Date(b.pushed_at) - new Date(a.pushed_at);
+        }
+      }
+
+      function load(response) {
+        if (!response || !response.data) {
+          return;
+        }
+
+        repos = repos.concat(response.data);
+        build();
+        maybeLoadNext(response);
+      }
+
+      function maybeLoadNext(response) {
+        var meta = response.meta;
+        if (!meta) return;
+        var Link = meta.Link;
+        if (!Array.isArray(Link)) return;
+        var next = Link.map(function(x) {
+          return {
+            url: x[0],
+            meta: x[1] || {}
+          };
+        }).filter(function(x) {
+          return x.meta.rel === "next";
+        })[0];
+        if (next) {
+          $.ajax({
+            url: next.url,
+            jsonp: "load",
+            dataType: "jsonp",
+          });
+        }
+      }
+
+      $(function() {
+        $('#navTabs a').bind('click', function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      });
+    </script>
+    <script src="https://api.github.com/users/caitp/repos?callback=load&per_page=200"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44389518-1', 'caitp.github.io');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
